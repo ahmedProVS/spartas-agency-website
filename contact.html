@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Spartas Agency for digital services. Reach out via email, WhatsApp, or LinkedIn.">
+    <meta name="keywords" content="contact, Spartas Agency, digital agency">
     <title>Spartas Agency - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
             color: #000000;
+            line-height: 1.6;
         }
         header {
             background-color: #000000;
             color: #ffffff;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         .logo {
+            font-family: 'Montserrat', sans-serif;
             font-size: 2em;
             font-weight: bold;
-            color: #c0c0c0; /* Silver color for logo text */
+            color: #c0c0c0;
         }
         nav {
             margin-top: 10px;
@@ -30,26 +39,49 @@
             color: #ffffff;
             margin: 0 15px;
             text-decoration: none;
+            font-weight: 500;
         }
         nav a:hover {
             color: #c0c0c0;
         }
         section {
-            padding: 50px;
+            padding: 50px 20px;
             text-align: center;
         }
         #contact {
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
+        }
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1 1 200px;
+        }
+        .contact-item a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-item a:hover {
+            color: #c0c0c0;
         }
         footer {
             background-color: #000000;
             color: #ffffff;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        @media (max-width: 768px) {
+            .contact-links { flex-direction: column; }
         }
     </style>
 </head>
@@ -62,12 +94,23 @@
         </nav>
     </header>
     
-    <section id="contact" class="container">
+    <section id="contact">
         <h2>Contact Us</h2>
         <p>Get in touch with us for inquiries.</p>
-        <p>Email: <a href="mailto:ahmedreda1192@gmail.com">ahmedreda1192@gmail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/201282094608">+20-1282094608</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmed-reda-632134366">www.linkedin.com/in/ahmed-reda-632134366</a></p>
+        <div class="contact-links">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i><br>
+                <a href="mailto:ahmedreda1192@gmail.com">ahmedreda1192@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i><br>
+                <a href="https://wa.me/201282094608">+20-1282094608</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i><br>
+                <a href="https://www.linkedin.com/in/ahmed-reda-632134366">LinkedIn Profile</a>
+            </div>
+        </div>
     </section>
     
     <footer>
