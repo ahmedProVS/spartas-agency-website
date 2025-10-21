@@ -6,7 +6,7 @@
   <title>Spartas Agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Schibsted+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior: smooth; }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
       min-height: 100vh;
       background: radial-gradient(circle at top, #1b1b1b, #0b0b0b);
@@ -14,87 +14,91 @@
       color: #f0f0f0;
       overflow-x: hidden;
     }
-
     nav {
       position: fixed; top:0; left:0; width:100%;
-      display:flex; justify-content:flex-end; align-items:center;
+      display:flex; justify-content:flex-end;
       padding:20px 50px;
-      background: rgba(0,0,0,0.3);
-      backdrop-filter: blur(10px);
       z-index:10;
     }
     nav a {
       color: #ccc; text-decoration:none; margin-left:30px;
       font-weight:600; transition: color 0.3s;
+      font-family: 'Schibsted Grotesk', sans-serif;
     }
-    nav a:hover { color: #fff; }
+    nav a:hover {
+      color: #fff;
+    }
 
-    .logo-container {
-      position: relative;
-      top:120px;
+    .hero {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
       text-align:center;
+      height:100vh;
+      position:relative;
       animation: fadeIn 2s ease forwards;
-      margin-bottom: 100px;
     }
-    .logo-container img {
+
+    .hero img {
       width: 180px;
+      height: auto;
       mix-blend-mode: lighten;
       filter: brightness(1.2) contrast(1.1);
-      animation: fadeUp 2s ease forwards;
+      animation: floaty 6s ease-in-out infinite;
     }
-    .logo-container h1 {
+
+    .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
+      font-size: 3.5rem;
       color: #ffffff;
-      margin-top: 20px;
-      opacity:0;
-      animation: fadeUp 2s 0.5s ease forwards;
+      margin-top: 25px;
+      animation: fadeUp 1.5s ease forwards;
     }
-    .logo-container p {
+
+    .hero p {
       font-size:1.1rem;
       color: #aaaaaa;
       max-width: 450px;
       margin: 10px auto 0;
+      animation: fadeUp 1.5s 0.3s ease forwards;
       opacity:0;
-      animation: fadeUp 2s 1s ease forwards;
+      animation-fill-mode:forwards;
     }
 
-    section.summary {
-      background: #111;
-      padding: 80px 20px;
+    #what-we-do {
+      background: linear-gradient(to bottom, #0b0b0b, #141414);
+      padding: 180px 20px; /* ✨ المسافة الجديدة بين اللوجو والقسم */
       text-align: center;
-      animation: fadeIn 2s 1s ease forwards;
+      animation: fadeIn 1.5s ease forwards;
     }
-    section.summary h2 {
-      font-size: 2.5rem;
-      color: #fff;
-      margin-bottom: 20px;
+
+    #what-we-do h2 {
       font-family: 'Playfair Display', serif;
-    }
-    section.summary p {
-      color: #ccc;
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      line-height: 1.8;
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 15px;
     }
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #777;
-      font-size: 0.9rem;
-      border-top: 1px solid #222;
-      background: #0b0b0b;
+    #what-we-do p {
+      color: #bbbbbb;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 1rem;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes floaty {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
@@ -104,24 +108,18 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="logo-container">
+  <section class="hero">
     <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion Logo">
     <h1>SPARTAS</h1>
     <p>We don’t follow trends — we set them. Spartas Agency, where creativity roars.</p>
-  </div>
-
-  <section class="summary">
-    <h2>What We Do</h2>
-    <p>
-      At <strong>Spartas Agency</strong>, we craft digital experiences that leave a mark.  
-      From sleek websites and smart apps to bold branding and marketing strategies —  
-      we turn ideas into impact.  
-      We blend creativity with technology to help brands grow, engage, and stand out in the digital arena. ⚡
-    </p>
   </section>
 
-  <footer>
-    © 2025 Spartas Agency. All rights reserved.
-  </footer>
+  <section id="what-we-do">
+    <h2>What We Do</h2>
+    <p>
+      Spartas Agency blends creativity and technology to build digital experiences that stand out.  
+      From web design and branding to strategy and development — we create solutions that make brands roar.
+    </p>
+  </section>
 </body>
 </html>
