@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Spartas Agency: Creative digital agency specializing in modern websites and brand identities for ambitious businesses.">
-    <meta name="keywords" content="digital agency, web design, branding, Spartas">
-    <title>Spartas Agency - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Spartas Agency: Creative digital agency crafting modern websites and brand identities.">
+    <meta name="keywords" content="Spartas Agency, web design, branding, digital agency, creative team">
+    <title>Spartas Agency</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
-        * {
-            box-sizing: border-box;
-        }
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
             background-color: #fff;
-            color: #000;
+            color: #111;
             line-height: 1.6;
         }
 
+        /* HEADER */
         header {
-            background-color: #111;
+            background: #000;
             color: #fff;
-            padding: 15px 20px;
+            padding: 20px 0;
             text-align: center;
             position: sticky;
             top: 0;
@@ -32,15 +34,13 @@
         }
 
         .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2em;
-            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6em;
+            font-weight: 700;
             color: #c0c0c0;
-            margin: 0;
-        }
-
-        nav {
-            margin-top: 10px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            animation: fadeInDown 1s ease;
         }
 
         nav a {
@@ -48,61 +48,68 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
         nav a:hover {
             color: #c0c0c0;
         }
 
+        /* HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, #000, #222);
-            padding: 120px 20px;
-            text-align: center;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #000 0%, #111 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: #fff;
+            text-align: center;
+            padding: 0 20px;
             animation: fadeIn 1.2s ease-in;
         }
 
         .hero h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 3em;
             margin-bottom: 20px;
+            letter-spacing: 1px;
         }
 
         .hero p {
-            font-size: 1.2em;
-            max-width: 650px;
-            margin: 0 auto 30px;
-            color: #ddd;
+            max-width: 600px;
+            font-size: 1.1em;
+            color: #ccc;
         }
 
-        .hero a.cta {
-            display: inline-block;
-            background-color: #c0c0c0;
-            color: #000;
+        .cta-btn {
+            margin-top: 30px;
             padding: 12px 28px;
-            border-radius: 6px;
-            text-decoration: none;
+            background: #c0c0c0;
+            color: #000;
             font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
-        .hero a.cta:hover {
-            background-color: #fff;
+        .cta-btn:hover {
+            background: #fff;
             transform: scale(1.05);
         }
 
+        /* SERVICES */
         section {
             padding: 60px 20px;
             text-align: center;
         }
 
         #services {
-            background-color: #f9f9f9;
+            background: #f7f7f7;
         }
 
         #services h2 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
             margin-bottom: 40px;
         }
 
@@ -116,12 +123,12 @@
         }
 
         .service-item {
-            background-color: #fff;
+            background: #fff;
             padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             flex: 1 1 300px;
-            max-width: 300px;
+            max-width: 320px;
             transition: transform 0.3s ease;
         }
 
@@ -130,65 +137,74 @@
         }
 
         footer {
-            background-color: #111;
+            background: #000;
             color: #fff;
             text-align: center;
             padding: 25px 10px;
-            font-size: 0.95em;
+            font-size: 0.9em;
         }
 
         footer a {
             color: #c0c0c0;
-            margin-left: 8px;
-            text-decoration: none;
+            margin: 0 8px;
         }
 
+        /* ANIMATIONS */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.3em; }
-            .hero p { font-size: 1em; }
-            .services-grid { flex-direction: column; align-items: center; }
+            .hero h1 { font-size: 2.2em; }
+            .services-grid { flex-direction: column; }
         }
     </style>
 </head>
+
 <body>
+    <!-- HEADER -->
     <header>
         <div class="logo">Spartas</div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="#services">Services</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    
+
+    <!-- HERO -->
     <section class="hero">
         <h1>Welcome to Spartas Agency</h1>
-        <p>We’re a creative digital agency led by experienced minds — crafting modern websites and strong brand identities that leave a lasting mark.</p>
-        <a href="https://wa.me/201234567890" class="cta" target="_blank"><i class="fa-solid fa-comments"></i> Let’s Talk</a>
+        <p>We’re a creative digital agency powered by experts — crafting sleek, modern websites and strong brand identities.  
+        A new agency led by <strong>Ahmed Reda</strong> — built to make your business unforgettable.</p>
+        <a href="contact.html" class="cta-btn">Let’s Talk</a>
     </section>
-    
+
+    <!-- SERVICES -->
     <section id="services">
         <h2>Our Services</h2>
         <div class="services-grid">
             <div class="service-item">
-                <h3>Web Design</h3>
-                <p>Modern, responsive websites that engage users and drive conversions.</p>
+                <h3><i class="fas fa-laptop-code"></i> Web Design</h3>
+                <p>Clean, responsive, and creative websites that truly reflect your vision.</p>
             </div>
             <div class="service-item">
-                <h3>Branding</h3>
-                <p>Unique brand identities that stand out and build lasting connections.</p>
+                <h3><i class="fas fa-pen-nib"></i> Branding</h3>
+                <p>Visual identities that tell your story and set your business apart.</p>
             </div>
             <div class="service-item">
-                <h3>Digital Strategy</h3>
-                <p>Data-driven strategies to maximize your online presence and results.</p>
+                <h3><i class="fas fa-chart-line"></i> Digital Strategy</h3>
+                <p>Smart strategies that boost visibility and turn ideas into growth.</p>
             </div>
         </div>
     </section>
-    
+
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 Spartas Agency. All rights reserved.</p>
         <p>Follow us: 
