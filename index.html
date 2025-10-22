@@ -50,14 +50,14 @@
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
+      font-size: 3.5rem;
       color: #ffffff;
       margin-top: 25px;
       animation: fadeUp 1.5s ease forwards;
     }
 
     .hero p {
-      font-size:2rem;
+      font-size:1.1rem;
       color: #aaaaaa;
       max-width: 450px;
       margin: 10px auto 0;
@@ -68,25 +68,99 @@
 
     #what-we-do {
       background: linear-gradient(to bottom, #0b0b0b, #141414);
-      padding: 180px 20px; /* ✨ المسافة الجديدة بين اللوجو والقسم */
+      padding: 180px 20px;
       text-align: center;
       animation: fadeIn 1.5s ease forwards;
     }
 
     #what-we-do h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
+      font-size: 2.2rem;
       color: #fff;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     #what-we-do p {
       color: #bbbbbb;
-      max-width: 700px;
+      max-width: 600px;
       margin: 0 auto;
-      line-height: 1.9;
-      font-size: 2rem;
+      line-height: 1.7;
+      font-size: 1rem;
     }
+    
+    /* NEW SERVICES SECTION STYLES */
+    #services {
+      background: linear-gradient(to top, #0b0b0b, #141414);
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    #services h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 50px;
+    }
+
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-category {
+      background-color: #1c1c1c;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      flex: 1 1 45%; /* Allows two items per row on larger screens */
+      min-width: 300px; /* Ensures good readability on smaller screens */
+      text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-category:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .service-category h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #d4af37; /* A subtle gold color for emphasis */
+      margin-bottom: 20px;
+      border-bottom: 2px solid #2c2c2c;
+      padding-bottom: 10px;
+    }
+
+    .service-category ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .service-category ul li {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: #cccccc;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .service-category ul li::before {
+      content: '»';
+      color: #d4af37;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      position: absolute;
+      left: 0;
+    }
+
+    /* END NEW SERVICES SECTION STYLES */
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -111,15 +185,44 @@
   <section class="hero">
     <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion Logo">
     <h1>SPARTAS</h1>
-    <p>We don’t follow trends we set them. Spartas Agency, where creativity roars.</p>
+    <p>We don’t follow trends — we set them. Spartas Agency, where creativity roars.</p>
   </section>
 
   <section id="what-we-do">
     <h2>What We Do</h2>
     <p>
       Spartas Agency blends creativity and technology to build digital experiences that stand out.  
-      From web design and branding to strategy and development we create solutions that make brands roar.
+      From web design and branding to strategy and development — we create solutions that make brands roar.
     </p>
   </section>
-</body>
+
+  <section id="services">
+    <h2>Our Core Services</h2>
+    <div class="services-grid">
+
+      <div class="service-category">
+        <h3>Elite Web Development</h3>
+        <ul>
+          <li>Custom Frontend Development: Creating responsive, high-performance user interfaces using modern frameworks (React, Vue.js).</li>
+          <li>Robust Backend Development: Building scalable, secure, and efficient server-side architecture (Node.js, Python, PHP).</li>
+          <li>E-commerce Solutions: Developing custom, secure, and user-friendly online stores (Shopify, WooCommerce, Custom Platforms).</li>
+          <li>CMS Development & Integration: Expert setup and customization of platforms like WordPress and headless CMS solutions.</li>
+          <li>Website Audit & Optimization: Performance tuning, SEO optimization, and accessibility compliance.</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3>Masterful Graphic Design</h3>
+        <ul>
+          <li>Brand Identity & Logo Design: Crafting memorable and strategic visual identities that communicate your brand's essence.</li>
+          <li>UI/UX Design: Designing intuitive, engaging, and accessible user interfaces for websites and applications.</li>
+          <li>Marketing & Promotional Materials: Designing professional brochures, flyers, presentations, and digital ad creative.</li>
+          <li>Social Media Graphics: Developing cohesive and impactful visual content for all social media platforms.</li>
+          <li>Illustration & Iconography: Creating custom vector illustrations and icon sets to enhance digital products.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+  </body>
 </html>
