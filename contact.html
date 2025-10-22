@@ -7,6 +7,7 @@
   <meta name="keywords" content="contact, Spartas agency, web design, branding, digital agency" />
   <title>Contact | Spartas Agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
   <style>
@@ -22,31 +23,50 @@
     header {
       background-color: rgba(0, 0, 0, 0.8);
       color: #ffffff;
-      padding: 20px;
-      text-align: center;
+      padding: 15px 50px; /* Adjusted padding */
       position: sticky;
       top: 0;
       z-index: 100;
       backdrop-filter: blur(8px);
+      display: flex; /* Enable flexbox for logo and nav alignment */
+      justify-content: space-between; /* Space out logo and nav */
+      align-items: center;
+    }
+    
+    .logo-container {
+        display: flex;
+        align-items: center;
+        /* Aligns logo text and image */
+    }
+
+    .logo-img {
+        width: 30px; /* Size of the logo image */
+        height: auto;
+        margin-right: 10px; /* Space between image and text */
+        mix-blend-mode: lighten;
+        filter: brightness(1.2) contrast(1.1);
     }
 
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 2em;
+      /* Original size was 2em, increasing by 0.5em means 2.5em */
+      font-size: 2.5em; 
       font-weight: 700;
       color: #c0c0c0;
       letter-spacing: 1px;
     }
 
     nav {
-      margin-top: 10px;
+      margin-top: 0; /* Remove previous margin */
     }
 
     nav a {
+      /* Applying new font and removing bold */
+      font-family: 'Inter', sans-serif;
+      font-weight: 400; /* Ensuring it is not bold */
       color: #ffffff;
-      margin: 0 15px;
+      margin-left: 30px; /* Use margin-left for spacing between links */
       text-decoration: none;
-      font-weight: 500;
       transition: color 0.3s ease;
     }
 
@@ -164,13 +184,20 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.2em; }
       .contact-item { width: 90%; }
+      /* Adjust header on mobile */
+      header { padding: 15px 20px; }
+      .logo { font-size: 2em; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">Spartas</div>
+    <div class="logo-container">
+        <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion Logo" class="logo-img">
+        <div class="logo">Spartas</div>
+    </div>
+    
     <nav>
       <a href="index.html">Home</a>
       <a href="contact.html">Contact</a>
@@ -189,7 +216,9 @@
   <section id="contact">
     <div class="contact-container">
       <div class="contact-item">
-        <i class="fab fa-whatsapp"></i> <span><a href="https://wa.me/201282094608" target="_blank">+20 128 209 4608</a></span> </div>
+        <i class="fab fa-whatsapp"></i> 
+        <span><a href="https://wa.me/201282094608" target="_blank">+20 128 209 4608</a></span> 
+      </div>
 
       <div class="contact-item">
         <i class="fas fa-envelope"></i>
