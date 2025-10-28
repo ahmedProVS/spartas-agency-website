@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the projects and creative history of Spartas Agency." />
+  <meta name="keywords" content="portfolio, Spartas agency, projects, web development, graphic design" />
+  <title>Portfolio | Spartas Agency</title>
+
+  <link rel="icon" type="image/png" href="https://i.ibb.co/BHq6qDdx/Web.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(160deg, #000000 60%, #1a1a1a 100%);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-img {
+        width: 30px;
+        height: auto;
+        margin-right: 10px;
+        mix-blend-mode: lighten;
+        filter: brightness(1.2) contrast(1.1);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #c0c0c0;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 0;
+    }
+
+    nav a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #ffffff;
+      margin-left: 30px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #c0c0c0;
+    }
+
+    /* Hero section motion */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: radial-gradient(circle at center, #1b1b1b 0%, #000000 80%);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      animation: slideDown 1.2s ease-out;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      color: #cfcfcf;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Download section (replaces contact) */
+    section#portfolio-content {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeUp 1.5s ease-in-out;
+    }
+
+    .download-container {
+      margin-top: 50px;
+    }
+
+    .download-button {
+        display: inline-block;
+        padding: 15px 40px;
+        background-color: #3d3d3d; /* Dark grey background */
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        border: 2px solid #555555;
+    }
+
+    .download-button:hover {
+        background-color: #555555;
+        transform: translateY(-2px);
+    }
+    
+    .download-button i {
+        margin-right: 10px;
+    }
+
+    footer {
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9em;
+      margin-top: 80px;
+      border-top: 1px solid #1f1f1f;
+    }
+
+    footer a {
+      color: #c0c0c0;
+      margin-left: 5px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2em; }
+      header { padding: 15px 20px; }
+      .logo { font-size: 2em; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+        <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion Logo" class="logo-img">
+        <div class="logo">Spartas</div>
+    </div>
+    
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Our Portfolio & History</h1>
+    <p>
+      Discover the creativity, technical expertise, and results we’ve delivered for our clients.
+      Download our comprehensive CV which details our experience and high-light projects.
+    </p>
+  </section>
+
+  <section id="portfolio-content">
+    <h2>Spartas Agency Comprehensive CV</h2>
+    
+    <div class="download-container">
+        <a href="Spartas CV.pdf" download class="download-button">
+            <i class="fas fa-download"></i>
+            Download Full Profile (Spartas CV.pdf)
+        </a>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Spartas Agency. All rights reserved.</p>
+    <p>Follow us: <a href="https://www.linkedin.com/in/ahmed-reda-632134366/" target="_blank"><i class="fab fa-linkedin"></i></a></p>
+  </footer>
+
+</body>
+</html>
