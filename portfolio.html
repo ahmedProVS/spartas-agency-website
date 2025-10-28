@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
   <style>
+    /* Base Styles (Matching Contact Page) */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -23,6 +24,7 @@
       overflow-x: hidden;
     }
 
+    /* Header & Navigation */
     header {
       background-color: rgba(0, 0, 0, 0.8);
       color: #ffffff;
@@ -51,7 +53,7 @@
 
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em; /* Increased by 0.5em */
+      font-size: 2.5em; 
       font-weight: 700;
       color: #c0c0c0;
       letter-spacing: 1px;
@@ -62,8 +64,8 @@
     }
 
     nav a {
-      font-family: 'Inter', sans-serif; /* New Font */
-      font-weight: 400; /* Not bold */
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
       color: #ffffff;
       margin-left: 30px;
       text-decoration: none;
@@ -74,7 +76,7 @@
       color: #c0c0c0;
     }
 
-    /* Hero section motion */
+    /* Hero section */
     .hero {
       text-align: center;
       padding: 100px 20px;
@@ -98,11 +100,18 @@
       animation: fadeIn 2s ease-in-out;
     }
 
-    /* Download section (replaces contact) */
+    /* Portfolio Content & Download Button */
     section#portfolio-content {
       text-align: center;
       padding: 60px 20px;
       animation: fadeUp 1.5s ease-in-out;
+    }
+
+    section#portfolio-content h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.2rem;
+        color: #fff;
+        margin-bottom: 15px;
     }
 
     .download-container {
@@ -131,6 +140,7 @@
         margin-right: 10px;
     }
 
+    /* Footer */
     footer {
       background-color: #000000;
       color: #ffffff;
@@ -151,7 +161,7 @@
       color: #ffffff;
     }
 
-    /* Animations */
+    /* Animations & Media Queries (for consistency) */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -201,7 +211,7 @@
     <h2>Spartas Agency Comprehensive CV</h2>
     
     <div class="download-container">
-        <a href="Spartas CV.pdf" download class="download-button">
+        <a href="https://drive.google.com/uc?export=download&id=1uGI7miBDMNqssdzZwe7-_p-X3_54g12r" target="_blank" class="download-button">
             <i class="fas fa-download"></i>
             Download Full Profile (Spartas CV.pdf)
         </a>
