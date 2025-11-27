@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | Spartas Agency</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Dark Theme Styles (Black & Silver) */
+        body {
+            background-color: #0d0d0d; /* Very dark background */
+            color: #cccccc; /* Light silver for general text */
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+        .header-bg {
+            background-color: #1a1a1a; /* Slightly lighter dark for header/footer */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .section-bg {
+            background-color: #1a1a1a;
+        }
+        .cta-button {
+            background-color: #333333; /* Darker silver/gray for CTA */
+            color: #ffffff; /* White text on CTA */
+            transition: all 0.3s ease;
+            border: 1px solid #555555; /* Subtle border */
+        }
+        .cta-button:hover {
+            background-color: #555555; /* Lighter silver/gray on hover */
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* White shadow on hover */
+        }
+        .process-step {
+            border-left: 4px solid #555555; /* Silver border for process steps */
+        }
+        .tech-icon {
+            filter: brightness(0.8) grayscale(100%); /* Make icons more silver/dark by default */
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+        .tech-icon:hover {
+            filter: brightness(1) grayscale(0%); /* Full color on hover */
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .text-highlight {
+            color: #aaaaaa; /* A specific silver tone for highlights */
+        }
+        .logo-img-nav {
+            filter: brightness(0.8) invert(1); /* Ensure the logo looks good on dark background */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar --><nav class="header-bg fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold text-white group cursor-pointer">
+                    <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Logo" class="h-8 logo-img-nav">
+                    <span class="text-gray-300 group-hover:text-white transition duration-300 text-3xl font-serif">Spartas</span>
+                </a>
+                <div class="flex items-center space-x-6 text-sm">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a>
+                    <a href="#" class="text-white">Services</a> <!-- Current page highlight --><a href="portfolio.html" class="text-gray-400 hover:text-white transition duration-200">Portfolio</a>
+                    <a href="testimonials.html" class="text-gray-400 hover:text-white transition duration-200">Testimonials</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-full cta-button font-semibold shadow-lg">
+                        Claim Your Free Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navigation Bar --><main class="pt-24">
+        <!-- Hero Section --><header class="py-20 bg-black text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <h1 class="text-6xl font-extrabold text-white mb-4">
+                    Expert <span class="text-highlight">Custom Web Development</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8">
+                    We combine full-stack technical mastery with user-centric design to build scalable, high-performance web solutions that drive real business growth.
+                </p>
+                <a href="contact.html" class="cta-button inline-block px-10 py-4 text-lg rounded-full font-bold shadow-xl hover:scale-[1.02]">
+                    Start Your Project Today
+                </a>
+            </div>
+        </header>
+
+        <!-- Core Pillars Section --><section class="py-16 section-bg">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-white">Our Three Core Pillars</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i class="fa-solid fa-mobile-screen-button text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Responsive & Mobile First</h3>
+                        <p class="text-gray-400">All projects are engineered from the ground up for optimal display and performance on any device, ensuring 100% reach to your entire audience.</p>
+                    </div>
+                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i class="fa-solid fa-rocket text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Speed and SEO Optimization</h3>
+                        <p class="text-gray-400">We prioritize clean code and efficient asset loading to achieve top-tier Google PageSpeed scores, giving you a competitive edge in search rankings.</p>
+                    </div>
+                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i class="fa-solid fa-code-fork text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Scalable Full-Stack Solutions</h3>
+                        <p class="text-gray-400">From the user interface (Front-End) to robust databases and secure servers (Back-End), we build integrated systems ready for massive growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Technology Stack --><section class="py-16 bg-black">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4 text-white">Our Preferred Tech Stack</h2>
+                <p class="text-lg text-gray-400 mb-12">We use modern, battle-tested technologies to deliver speed, reliability, and security.</p>
+                <div class="flex flex-wrap justify-center items-center gap-10">
+                    <!-- Icons representing technologies --><div class="tech-icon text-center w-20">
+                        <img src="https://placehold.co/80x80/1a1a1a/cccccc?text=React" alt="React Logo" class="h-20 w-20 mb-2 rounded-lg object-contain border border-gray-700 p-2">
+                        <p class="text-xs text-gray-300">React</p>
+                    </div>
+                    <div class="tech-icon text-center w-20">
+                        <img src="https://placehold.co/80x80/1a1a1a/cccccc?text=Node" alt="Node.js Logo" class="h-20 w-20 mb-2 rounded-lg object-contain border border-gray-700 p-2">
+                        <p class="text-xs text-gray-300">Node.js</p>
+                    </div>
+                    <div class="tech-icon text-center w-20">
+                        <img src="https://placehold.co/80x80/1a1a1a/cccccc?text=TS" alt="TypeScript Logo" class="h-20 w-20 mb-2 rounded-lg object-contain border border-gray-700 p-2">
+                        <p class="text-xs text-gray-300">TypeScript</p>
+                    </div>
+                    <div class="tech-icon text-center w-20">
+                        <img src="https://placehold.co/80x80/1a1a1a/cccccc?text=Tailwind" alt="Tailwind CSS Logo" class="h-20 w-20 mb-2 rounded-lg object-contain border border-gray-700 p-2">
+                        <p class="text-xs text-gray-300">Tailwind CSS</p>
+                    </div>
+                    <div class="tech-icon text-center w-20">
+                        <img src="https://placehold.co/80x80/1a1a1a/cccccc?text=Mongo" alt="MongoDB Logo" class="h-20 w-20 mb-2 rounded-lg object-contain border border-gray-700 p-2">
+                        <p class="text-xs text-gray-300">MongoDB</p>
+                    </div>
+                    <div class="tech-icon text-center w-20">
+                        <img src="https://placehold.co/80x80/1a1a1a/cccccc?text=Fbase" alt="Firebase Logo" class="h-20 w-20 mb-2 rounded-lg object-contain border border-gray-700 p-2">
+                        <p class="text-xs text-gray-300">Firebase</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Process Section --><section class="py-16 section-bg">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4 text-white">Our Transparent Development Process</h2>
+                <p class="text-lg text-gray-400 text-center mb-12">Know exactly what to expect from concept to launch and beyond.</p>
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Vertical Line Connector --><div class="absolute left-3 top-0 bottom-0 w-1 bg-gray-700 hidden sm:block"></div>
+
+                    <!-- Step 1 --><div class="flex items-start mb-10">
+                        <div class="w-6 h-6 rounded-full bg-highlight z-10 mr-4 flex-shrink-0"></div>
+                        <div class="flex-grow p-4 section-bg rounded-lg shadow-xl process-step border border-gray-700">
+                            <h3 class="text-2xl font-semibold mb-2 text-highlight">1. Discovery & Strategy</h3>
+                            <p class="text-gray-400">We analyze your business goals, target audience, and competitive landscape to define a clear technical and functional roadmap.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 --><div class="flex items-start mb-10">
+                        <div class="w-6 h-6 rounded-full bg-highlight z-10 mr-4 flex-shrink-0"></div>
+                        <div class="flex-grow p-4 section-bg rounded-lg shadow-xl process-step border border-gray-700">
+                            <h3 class="text-2xl font-semibold mb-2 text-highlight">2. Design & Prototyping</h3>
+                            <p class="text-gray-400">Creation of wireframes and high-fidelity mockups, ensuring the User Experience (UX) is intuitive and the look aligns with your brand identity.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 --><div class="flex items-start mb-10">
+                        <div class="w-6 h-6 rounded-full bg-highlight z-10 mr-4 flex-shrink-0"></div>
+                        <div class="flex-grow p-4 section-bg rounded-lg shadow-xl process-step border border-gray-700">
+                            <h3 class="text-2xl font-semibold mb-2 text-highlight">3. Development & Integration</h3>
+                            <p class="text-gray-400">Coding the front-end components and back-end logic. Continuous integration ensures smooth collaboration and rapid feature development.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 --><div class="flex items-start mb-10">
+                        <div class="w-6 h-6 rounded-full bg-highlight z-10 mr-4 flex-shrink-0"></div>
+                        <div class="flex-grow p-4 section-bg rounded-lg shadow-xl process-step border border-gray-700">
+                            <h3 class="text-2xl font-semibold mb-2 text-highlight">4. Quality Assurance & Launch</h3>
+                            <p class="text-gray-400">Rigorous testing across all devices and browsers. After client sign-off, we handle secure deployment to a globally reliable hosting environment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 --><div class="flex items-start">
+                        <div class="w-6 h-6 rounded-full bg-highlight z-10 mr-4 flex-shrink-0"></div>
+                        <div class="flex-grow p-4 section-bg rounded-lg shadow-xl process-step border border-gray-700">
+                            <h3 class="text-2xl font-semibold mb-2 text-highlight">5. Maintenance & Support</h3>
+                            <p class="text-gray-400">We offer post-launch support, continuous monitoring, security updates, and feature enhancements to ensure long-term success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section --><section class="py-16 bg-black text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-white mb-4">
+                    Ready to build a website that truly performs?
+                </h2>
+                <p class="text-xl text-gray-400 mb-8">
+                    Let's discuss your vision and turn it into a high-speed, scalable digital reality.
+                </p>
+                <a href="contact.html" class="cta-button inline-block px-12 py-5 text-xl rounded-full font-bold shadow-2xl hover:scale-105 transform transition duration-300">
+                    Get a Custom Quote Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Placeholder) --><footer class="header-bg py-8 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            &copy; 2025 Spartas Agency. All rights reserved. | <a href="contact.html" class="hover:text-white">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
