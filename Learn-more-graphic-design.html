@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design | Spartas Agency</title>
+    <!-- Favicon / Small logo in the tab -->
+    <link rel="icon" href="https://i.ibb.co/BHq6qDdx/Web.png" type="image/png">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Dark Theme Styles (Black & Silver) */
+        body {
+            background-color: #0d0d0d; /* Very dark background */
+            color: #cccccc; /* Light silver for general text */
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+        .header-bg {
+            background-color: #1a1a1a; /* Slightly lighter dark for header/footer */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .section-bg {
+            background-color: #1a1a1a;
+        }
+        .cta-button {
+            background-color: #333333; /* Darker silver/gray for CTA */
+            color: #ffffff; /* White text on CTA */
+            transition: all 0.3s ease;
+            border: 1px solid #555555; /* Subtle border */
+        }
+        .cta-button:hover {
+            background-color: #555555; /* Lighter silver/gray on hover */
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* White shadow on hover */
+        }
+        .process-step {
+            border-left: 4px solid #555555; /* Silver border for process steps */
+        }
+        .text-highlight {
+            color: #aaaaaa; /* A specific silver tone for highlights */
+        }
+        .logo-img-nav {
+            filter: brightness(0.8) invert(1); /* Ensure the logo looks good on dark background */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar (Using the Black & Silver Theme and the logo) -->
+    <nav class="header-bg fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold text-white group cursor-pointer">
+                    <!-- Your provided logo -->
+                    <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Logo" class="h-8 logo-img-nav">
+                    <span class="text-gray-300 group-hover:text-white transition duration-300 text-3xl font-serif">Spartas</span>
+                </a>
+                <div class="flex items-center space-x-6 text-sm">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a>
+                    <a href="services.html" class="text-white">Services</a>
+                    <a href="portfolio.html" class="text-gray-400 hover:text-white transition duration-200">Portfolio</a>
+                    <a href="testimonials.html" class="text-gray-400 hover:text-white transition duration-200">Testimonials</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-full cta-button font-semibold shadow-lg">
+                        Claim Your Free Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navigation Bar -->
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <header class="py-20 bg-black text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <h1 class="text-6xl font-extrabold text-white mb-4">
+                    Exceptional <span class="text-highlight">Comprehensive Graphic Design</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8">
+                    We craft memorable brand identities, stunning marketing collateral, and engaging visual content that captures attention and drives customer loyalty.
+                </p>
+                <a href="contact.html" class="cta-button inline-block px-10 py-4 text-lg rounded-full font-bold shadow-xl hover:scale-[1.02]">
+                    Define Your Brand Today
+                </a>
+            </div>
+        </header>
+
+        <!-- Services Offered Section -->
+        <section class="py-16 section-bg">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-white">Our Creative Capabilities</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i class="fa-solid fa-gem text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3 text-highlight">Brand Identity & Logo</h3>
+                        <p class="text-gray-400">Creation of unique, timeless logos and complete brand style guides that ensure consistency across all platforms.</p>
+                    </div>
+                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i class="fa-solid fa-print text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3 text-highlight">Marketing Collateral</h3>
+                        <p class="text-gray-400">Design for print materials, brochures, business cards, and presentations that leave a professional, lasting impression.</p>
+                    </div>
+                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i class="fa-brands fa-facebook-f text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3 text-highlight">Social Media & Ads</h3>
+                        <p class="text-gray-400">High-impact graphics, templates, and full campaign creative optimized for Instagram, Facebook, LinkedIn, and more.</p>
+                    </div>
+                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i class="fa-solid fa-video text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3 text-highlight">Video & Motion Graphics</h3>
+                        <p class="text-gray-400">Engaging motion graphics, animated logos, and short promotional videos to enhance digital storytelling and conversions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Process Section -->
+        <section class="py-16 bg-black">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4 text-white">Our Creative Journey</h2>
+                <p class="text-lg text-gray-400 text-center mb-12">How we transform an idea into a powerful visual identity.</p>
+                
+                <div class="grid md:grid-cols-3 gap-10 text-center max-w-6xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="p-6 bg-[#1a1a1a] rounded-xl shadow-lg border border-gray-700">
+                        <div class="text-5xl font-extrabold text-highlight mb-4">01</div>
+                        <i class="fa-solid fa-comments text-4xl text-highlight mb-3"></i>
+                        <h3 class="text-2xl font-semibold mb-2 text-white">Concept & Discovery</h3>
+                        <p class="text-gray-400">In-depth discussion to understand your brand's mission, values, and target market before any design begins.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="p-6 bg-[#1a1a1a] rounded-xl shadow-lg border border-gray-700">
+                        <div class="text-5xl font-extrabold text-highlight mb-4">02</div>
+                        <i class="fa-solid fa-paintbrush text-4xl text-highlight mb-3"></i>
+                        <h3 class="text-2xl font-semibold mb-2 text-white">Design & Iteration</h3>
+                        <p class="text-gray-400">Creation of initial concepts (e.g., 3 logo options). We iterate based on your feedback until the perfect design is achieved.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="p-6 bg-[#1a1a1a] rounded-xl shadow-lg border border-gray-700">
+                        <div class="text-5xl font-extrabold text-highlight mb-4">03</div>
+                        <i class="fa-solid fa-file-export text-4xl text-highlight mb-3"></i>
+                        <h3 class="text-2xl font-semibold mb-2 text-white">Finalization & Delivery</h3>
+                        <p class="text-gray-400">Delivery of all final source files (AI, EPS, SVG, PNG) and comprehensive brand usage guidelines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-16 section-bg text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-white mb-4">
+                    Ready to elevate your visual presence?
+                </h2>
+                <p class="text-xl text-gray-400 mb-8">
+                    A powerful brand identity is your most important asset. Let's build yours today.
+                </p>
+                <a href="contact.html" class="cta-button inline-block px-12 py-5 text-xl rounded-full font-bold shadow-2xl hover:scale-105 transform transition duration-300">
+                    Get a Free Design Consultation
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="header-bg py-8 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            &copy; 2025 Spartas Agency. All rights reserved. | <a href="contact.html" class="hover:text-white">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
