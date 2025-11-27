@@ -3,226 +3,490 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spartas Agency</title>
+  <title>Home | Spartas Agency</title>
   
   <link rel="icon" type="image/png" href="https://i.ibb.co/fdR2htKf/download-1.png" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Schibsted+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  
   <style>
-    /* ... (Existing styles remain the same) ... */
+    /* Global Styles & Color Palette: Black and Grays */
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       min-height: 100vh;
-      background: radial-gradient(circle at top, #1b1b1b, #0b0b0b);
-      font-family: 'Schibsted Grotesk', sans-serif;
-      color: #f0f0f0;
+      background: #000000; /* PURE BLACK BACKGROUND */
+      font-family: 'Inter', sans-serif;
+      color: #cccccc; /* Light Gray text */
       overflow-x: hidden;
     }
-    nav {
-      position: fixed; top:0; left:0; width:100%;
-      display:flex; justify-content:flex-end;
-      padding:20px 50px;
-      z-index:10;
-    }
-    nav a {
-      color: #ccc; text-decoration:none; margin-left:30px;
-      font-weight:600; transition: color 0.3s;
-      font-family: 'Schibsted Grotesk', sans-serif;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-
-    .hero {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      height:100vh;
-      position:relative;
-      animation: fadeIn 2s ease forwards;
-    }
-
-    .hero img {
-      width: 180px;
-      height: auto;
-      mix-blend-mode: lighten;
-      filter: brightness(1.2) contrast(1.1);
-      animation: floaty 6s ease-in-out infinite;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
+    
+    /* Header (Dark Theme) */
+    header {
+      background-color: #000000;
       color: #ffffff;
-      margin-top: 25px;
-      animation: fadeUp 1.5s ease forwards;
+      padding: 15px 50px; 
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      border-bottom: 1px solid #1a1a1a;
     }
 
-    .hero p {
-      font-size:1.1rem;
-      color: #aaaaaa;
-      max-width: 450px;
-      margin: 10px auto 0;
-      animation: fadeUp 1.5s 0.3s ease forwards;
-      opacity:0;
-      animation-fill-mode:forwards;
-    }
-
-    #what-we-do {
-      background: linear-gradient(to bottom, #0b0b0b, #141414);
-      padding: 180px 20px;
-      text-align: center;
-      animation: fadeIn 1.5s ease forwards;
-    }
-
-    #what-we-do h2 {
+    .logo-container { display: flex; align-items: center; }
+    .logo-img { width: 30px; height: auto; margin-right: 10px; filter: brightness(0.8) invert(1); }
+    .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: #fff;
-      margin-bottom: 15px;
-    }
-
-    #what-we-do p {
-      color: #bbbbbb;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.7;
-      font-size: 1rem;
+      font-size: 2.5em; 
+      font-weight: 700;
+      color: #c0c0c0;
+      letter-spacing: 1px;
     }
     
-    #services {
-      background: linear-gradient(to top, #0b0b0b, #141414);
-      padding: 100px 20px;
-      text-align: center;
+    nav a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400; 
+      color: #cccccc; 
+      margin-left: 30px; 
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffffff;
     }
 
-    #services h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: #fff;
-      margin-bottom: 50px;
+    /* Primary CTA Button */
+    .cta-button {
+      padding: 10px 20px;
+      background-color: #000000;
+      color: #ffffff !important;
+      text-decoration: none;
+      border: 1px solid #444;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #333;
+      color: #ffffff !important;
+    }
+    
+    /* Hero Section (Updated to single column) */
+    #hero-section {
+        background-color: #000000; 
+        padding: 100px 50px; /* Increased padding */
+        display: flex;
+        flex-direction: column; /* Added to stack logo and content vertically */
+        align-items: center;
+        justify-content: center; /* Center the single column */
+        text-align: center; /* Center content */
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    /* FLOATING LOGO STYLE */
+    .hero-logo-float {
+        width: 100px; 
+        height: auto;
+        margin-bottom: 30px;
+        filter: brightness(0.8) invert(1); /* Makes it white/gray on black background */
+        animation: floaty 6s ease-in-out infinite; /* Apply the float animation */
     }
 
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
+    .hero-content {
+        flex: none;
+        max-width: 800px; /* Limit width for readability */
+        margin: 0 auto;
     }
 
-    .service-category {
-      background-color: #1c1c1c;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-      flex: 1 1 45%; 
-      min-width: 300px; 
-      text-align: left;
-      transition: transform 0.3s, box-shadow 0.3s;
+    .hero-content h4 {
+        color: #999999;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
     }
 
-    .service-category:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        color: #ffffff;
+        margin-bottom: 20px;
     }
 
-    .service-category h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      color: #d4af37; 
-      margin-bottom: 20px;
-      border-bottom: 2px solid #2c2c2c;
-      padding-bottom: 10px;
+    .hero-content p {
+        color: #cccccc;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+    
+    .hero-actions {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center; /* Center buttons */
     }
 
-    .service-category ul {
-      list-style: none;
-      padding-left: 0;
+    .hero-actions .cta-button {
+        background-color: #ffffff; 
+        color: #000000 !important; 
+        border: none;
+        padding: 15px 30px;
     }
 
-    .service-category ul li {
-      margin-bottom: 12px;
-      font-size: 1rem;
-      color: #cccccc;
-      position: relative;
-      padding-left: 20px;
+    .hero-actions .cta-button:hover {
+        background-color: #cccccc;
+    }
+    
+    /* Secondary Button (View Our Work) */
+    .hero-actions .cta-button[style] {
+        background-color: #1a1a1a !important; 
+        color: #ffffff !important; 
+        border: 1px solid #333 !important;
+    }
+    
+    .hero-actions .cta-button[style]:hover {
+        background-color: #333 !important; 
     }
 
-    .service-category ul li::before {
-      content: '»';
-      color: #d4af37;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-      position: absolute;
-      left: 0;
+    /* Core Services Section (No change needed for layout, kept dark theme) */
+    #core-services {
+        background-color: #0a0a0a;
+        padding: 80px 50px;
+        text-align: center;
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    #core-services h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.2rem;
+        color: #ffffff;
+        margin-bottom: 10px;
     }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    #core-services > p {
+        color: #cccccc;
+        font-size: 1rem;
+        margin-bottom: 50px;
     }
+
+    .service-cards {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .service-card {
+        flex: 1;
+        padding: 40px;
+        background-color: #1a1a1a;
+        border: 1px solid #333333;
+        border-radius: 8px;
+        text-align: left;
+        transition: box-shadow 0.3s, background-color 0.3s;
+    }
+
+    .service-card:hover {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        background-color: #242424;
+    }
+
+    .service-card .icon-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .service-card .icon-header i {
+        font-size: 1.8rem;
+        color: #cccccc; 
+        margin-right: 15px;
+    }
+
+    .service-card .icon-header h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+
+    .service-card > p {
+        color: #aaaaaa;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    .service-card ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .service-card ul li {
+        color: #cccccc;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .service-card ul li::before {
+        content: '\f00c'; 
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        color: #ffffff;
+        font-size: 0.8em;
+        position: absolute;
+        left: 0;
+        top: 3px;
+    }
+    
+    .learn-more {
+        display: inline-block;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 15px;
+        transition: color 0.3s;
+    }
+    .learn-more:hover {
+        color: #cccccc;
+    }
+
+    /* Why Choose Spartas Section (Updated to single column) */
+    #why-choose {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 100px 50px;
+        display: flex;
+        flex-direction: column; /* Ensure single column */
+        align-items: center;
+        text-align: center; /* Center content */
+        gap: 0;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .why-content {
+        flex: none;
+        max-width: 800px; /* Limit width for readability */
+        margin: 0 auto;
+    }
+    
+    .why-content h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.8rem;
+        color: #ffffff;
+        margin-bottom: 25px;
+    }
+
+    .why-content p {
+        color: #cccccc;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+    
+    .feature-list {
+        text-align: left; /* Re-align features list */
+    }
+
+    .feature-list .feature {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    .feature-list .feature i {
+        font-size: 1.5rem;
+        color: #cccccc;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+
+    .feature-list .feature h4 {
+        font-size: 1.2rem;
+        color: #ffffff;
+        margin-bottom: 5px;
+    }
+
+    .feature-list .feature p {
+        font-size: 1rem;
+        color: #aaaaaa;
+        margin: 0;
+    }
+
+    /* Footer (Black Theme) */
+    footer {
+        background-color: #000000;
+        color: #ffffff;
+        text-align: center;
+        padding: 25px;
+        font-size: 0.9em;
+        border-top: 1px solid #1a1a1a;
+    }
+
+    footer a {
+        color: #cccccc;
+        margin-left: 5px;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: #ffffff;
+    }
+
+    /* FLOATING ANIMATION KEYFRAMES */
     @keyframes floaty {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    /* Media Queries */
+    @media (max-width: 1024px) {
+        #hero-section, #why-choose {
+            padding: 60px 20px;
+        }
+        .hero-content, .why-content {
+            max-width: 95%;
+        }
+        .service-cards {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    @media (max-width: 768px) {
+        .logo { font-size: 2em; }
+        .hero-content h1 { font-size: 2.5rem; }
+        header nav { display: none; }
+        .hero-logo-float { width: 80px; } /* Scale logo down on mobile */
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a> 
-    <a href="contact.html">Contact</a>
-  </nav>
+  
+  <header>
+    <div class="logo-container">
+        <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion Logo" class="logo-img">
+        <div class="logo">Spartas</div>
+    </div>
+    
+    <nav>
+      <a href="index.html">About Us</a>
+      <a href="portfolio.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#">Testimonials</a>
+      <a href="contact.html" class="cta-button">Claim Your Free Quote</a>
+    </nav>
+  </header>
 
-  <section class="hero">
-    <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion Logo">
-    <h1>SPARTAS</h1>
-    <p>We don’t follow trends, we set them. Spartas Agency, where creativity roars.</p>
+  <section id="hero-section">
+    <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion Logo" class="hero-logo-float">
+    
+    <div class="hero-content">
+      <h4>Full Service Digital Agency</h4>
+      <h1>Transform Your Brand With Custom Digital Experiences</h1>
+      <p>
+        We craft high-impact websites and stunning visual branding that help growing businesses stand out online. Our team combines expertise in web development, graphic design, and video editing to turn your vision to life.
+      </p>
+      <div class="hero-actions">
+        <a href="contact.html" class="cta-button">Get Your Free Quote</a>
+        <a href="portfolio.html" class="cta-button" style="background-color: #1a1a1a; color: #ffffff !important; border: 1px solid #333;">View Our Work <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <small style="display:block; margin-top: 20px; color: #666;">*No commitment required | Free consultation</small>
+      <p style="text-align: center; color: #cccccc; margin-top: 20px;">We have completed over 50+ Projects.</p> 
+    </div>
   </section>
 
-  <section id="what-we-do">
-    <h2>What We Do</h2>
-    <p>
-      Spartas Agency: Where creativity roars. We blend cutting-edge technology with strategic design to build exceptional digital experiences.  
-      Specializing in masterful Web Development and distinctive Graphic Design, we deliver solutions that make your brand stand out.
-    </p>
-  </section>
-
-  <section id="services">
+  <section id="core-services">
     <h2>Our Core Services</h2>
-    <div class="services-grid">
-      <div class="service-category">
-        <h3>Elite Web Development</h3>
+    <p>
+        We combine expert web development with professional graphic design to deliver complete digital solutions that drive results.
+    </p>
+    <div class="service-cards">
+      <div class="service-card">
+        <div class="icon-header">
+          <i class="fas fa-code"></i>
+          <h3>Custom Web Development</h3>
+        </div>
+        <p>
+            Build powerful, responsive websites with our full-stack development expertise. We focus on performance and a clean, responsive design to achieve fast and seamless user experiences.
+        </p>
         <ul>
-          <li>Custom Frontend Development: Creating responsive, high-performance user interfaces using modern frameworks (React, Vue.js).</li>
-          <li>Robust Backend Development: Building scalable, secure, and efficient server-side architecture (Node.js, Python, PHP).</li>
-          <li>E-commerce Solutions: Developing custom, secure, and user-friendly online stores (Shopify, WooCommerce, Custom Platforms).</li>
-          <li>CMS Development & Integration: Expert setup and customization of platforms like WordPress and headless CMS solutions.</li>
-          <li>Website Audit & Optimization: Performance tuning, SEO optimization, and accessibility compliance.</li>
+          <li>Responsive & Mobile First Design</li>
+          <li>Front-End & Back-End Development</li>
+          <li>SEO Optimization & Web Performance</li>
+          <li>CMS (WordPress) & APIs Integration</li>
         </ul>
+        <a href="portfolio.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
 
-      <div class="service-category">
-        <h3>Masterful Graphic Design</h3>
+      <div class="service-card">
+        <div class="icon-header">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Comprehensive Graphic Design</h3>
+        </div>
+        <p>
+            Create a memorable brand identity with professional graphic design. From logos to complete marketing materials, we handle everything under one roof.
+        </p>
         <ul>
-          <li>Brand Identity & Logo Design: Crafting memorable and strategic visual identities that communicate your brand's essence.</li>
-          <li>UI/UX Design: Designing intuitive, engaging, and accessible user interfaces for websites and applications.</li>
-          <li>Marketing & Promotional Materials: Designing professional brochures, flyers, presentations, and digital ad creative.</li>
-          <li>Social Media Graphics: Developing cohesive and impactful visual content for all social media platforms.</li>
-          <li>Illustration & Iconography: Creating custom vector illustrations and icon sets to enhance digital products.</li>
+          <li>Brand Identity & Logo Design</li>
+          <li>Marketing Collateral & Print Design</li>
+          <li>Social Media & Promotions</li>
+          <li>Video Editing & Motion Graphics</li>
         </ul>
+        <a href="portfolio.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
+
+  <section id="why-choose">
+    <div class="why-content">
+      <h2>Why Growing Businesses Choose Spartas</h2>
+      <p style="text-align: center; color: #cccccc; margin-bottom: 40px;">Our collective professional experience is over 5+ Years.</p>
+      
+      <p>
+        We're not just developers and designers—we're your growth partners. Our integrated approach allows your project to run smoothly and works towards achieving your business goals.
+      </p>
+      <div class="feature-list">
+        <div class="feature">
+          <i class="far fa-clock"></i>
+          <div>
+            <h4>Fast Turnaround Time</h4>
+            <p>We deliver high-quality projects on schedule without compromising craftsmanship or attention to detail.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <i class="fas fa-users"></i>
+          <div>
+            <h4>Collaborative Process</h4>
+            <p>Your vision guides every decision. We work closely with you to ensure the final product meets your expectations.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <i class="fas fa-lightbulb"></i>
+          <div>
+            <h4>Results-Driven Approach</h4>
+            <p>We blend strategic design with technical thinking. Every element is crafted to achieve tangible business outcomes.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <i class="fas fa-headset"></i>
+          <div>
+            <h4>Ongoing Support</h4>
+            <p>Our relationship doesn't end at Launch. We provide continuous support to help your digital presence thrive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 Spartas Agency. All rights reserved.</p>
+    <p>Follow us: <a href="https://www.linkedin.com/in/ahmed-reda-632134366/" target="_blank"><i class="fab fa-linkedin"></i></a></p>
+  </footer>
+
 </body>
 </html>
