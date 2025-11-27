@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Spartas Agency</title>
+    <!-- Favicon / Small logo in the tab -->
+    <link rel="icon" href="https://i.ibb.co/BHq6qDdx/Web.png" type="image/png">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Dark Theme Styles (Black & Silver) */
+        body {
+            background-color: #0d0d0d; /* Very dark background */
+            color: #cccccc; /* Light silver for general text */
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+        .header-bg {
+            background-color: #1a1a1a; /* Slightly lighter dark for header/footer */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .section-bg {
+            background-color: #1a1a1a;
+        }
+        /* Styling for the large Service Buttons */
+        .service-card {
+            background-color: #1a1a1a;
+            transition: all 0.3s ease;
+            border: 1px solid #333333;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            /* Gradient effect on hover */
+            background-image: linear-gradient(135deg, #1a1a1a 50%, #1a1a1a 50%);
+            background-size: 200% 200%;
+        }
+        .service-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: #aaaaaa;
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+            background-position: 100% 100%;
+        }
+        .text-highlight {
+            color: #aaaaaa; /* A specific silver tone for highlights */
+        }
+        .cta-button {
+            background-color: #333333;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            border: 1px solid #555555;
+        }
+        .cta-button:hover {
+            background-color: #555555;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+        .logo-img-nav {
+            filter: brightness(0.8) invert(1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="header-bg fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold text-white group cursor-pointer">
+                    <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Logo" class="h-8 logo-img-nav">
+                    <span class="text-gray-300 group-hover:text-white transition duration-300 text-3xl font-serif">Spartas</span>
+                </a>
+                <div class="flex items-center space-x-6 text-sm">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a>
+                    <a href="services.html" class="text-white">Services</a>
+                    <a href="portfolio.html" class="text-gray-400 hover:text-white transition duration-200">Portfolio</a>
+                    <a href="testimonials.html" class="text-gray-400 hover:text-white transition duration-200">Testimonials</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-full cta-button font-semibold shadow-lg">
+                        Claim Your Free Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navigation Bar -->
+
+    <main class="pt-24">
+        
+        <!-- Hero Section for Services -->
+        <header class="py-20 bg-black text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <h1 class="text-6xl font-extrabold text-white mb-4">
+                    Our <span class="text-highlight">Expert Services</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Choose the path that leads to your success. We offer specialized solutions in both cutting-edge web development and impactful graphic design.
+                </p>
+            </div>
+        </header>
+
+        <!-- Two Service Buttons Section -->
+        <section class="py-20 section-bg">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+
+                    <!-- Web Development Button -->
+                    <a href="web-development.html" class="service-card block p-8 rounded-2xl text-center group">
+                        <i class="fa-solid fa-code text-6xl text-highlight mb-6 group-hover:text-white transition duration-300"></i>
+                        <h2 class="text-4xl font-bold mb-3 text-white group-hover:text-highlight transition duration-300">
+                            Custom Web Development
+                        </h2>
+                        <p class="text-gray-400 mb-6 group-hover:text-gray-300 transition duration-300">
+                            Building high-speed, secure, and scalable digital platforms from scratch.
+                        </p>
+                        <span class="inline-block px-8 py-3 text-lg font-semibold rounded-full bg-black text-highlight border border-highlight group-hover:bg-highlight group-hover:text-black transition duration-300">
+                            Explore Web Solutions &rarr;
+                        </span>
+                    </a>
+
+                    <!-- Graphic Design Button -->
+                    <a href="graphic-design.html" class="service-card block p-8 rounded-2xl text-center group">
+                        <i class="fa-solid fa-palette text-6xl text-highlight mb-6 group-hover:text-white transition duration-300"></i>
+                        <h2 class="text-4xl font-bold mb-3 text-white group-hover:text-highlight transition duration-300">
+                            Comprehensive Graphic Design
+                        </h2>
+                        <p class="text-gray-400 mb-6 group-hover:text-gray-300 transition duration-300">
+                            Creating memorable brand identities and stunning visual content across all media.
+                        </p>
+                        <span class="inline-block px-8 py-3 text-lg font-semibold rounded-full bg-black text-highlight border border-highlight group-hover:bg-highlight group-hover:text-black transition duration-300">
+                            Explore Design Services &rarr;
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section (from previous pages) -->
+        <section class="py-16 bg-black text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-white mb-4">
+                    Have a project in mind? Let's discuss it.
+                </h2>
+                <p class="text-xl text-gray-400 mb-8">
+                    Claim your free, no-obligation consultation to get started immediately.
+                </p>
+                <a href="contact.html" class="cta-button inline-block px-12 py-5 text-xl rounded-full font-bold shadow-2xl hover:scale-105 transform transition duration-300">
+                    Claim Your Free Quote Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="header-bg py-8 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            &copy; 2025 Spartas Agency. All rights reserved. | <a href="contact.html" class="hover:text-white">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
