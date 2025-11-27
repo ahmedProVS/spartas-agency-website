@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Spartas Agency</title>
-  
+ 
   <link rel="icon" type="image/png" href="https://i.ibb.co/fdR2htKf/download-1.png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  
+ 
   <style>
     /* Global Styles & Color Palette: Black and Grays */
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -19,43 +19,42 @@
       color: #cccccc; /* Light Gray text */
       overflow-x: hidden;
     }
-    
+   
     /* Header (Dark Theme) */
     header {
       background-color: #000000;
       color: #ffffff;
-      padding: 15px 50px; 
+      padding: 15px 50px;
       position: sticky;
       top: 0;
       z-index: 100;
-      display: flex; 
-      justify-content: space-between; 
+      display: flex;
+      justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #1a1a1a;
+      animation: fadeInUp 1s ease-out 0.1s both;
     }
-
     .logo-container { display: flex; align-items: center; }
     .logo-img { width: 30px; height: auto; margin-right: 10px; filter: brightness(0.8) invert(1); }
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em; 
+      font-size: 2.5em;
       font-weight: 700;
       color: #c0c0c0;
       letter-spacing: 1px;
     }
-    
+   
     nav a {
       font-family: 'Inter', sans-serif;
-      font-weight: 400; 
-      color: #cccccc; 
-      margin-left: 30px; 
+      font-weight: 400;
+      color: #cccccc;
+      margin-left: 30px;
       text-decoration: none;
       transition: color 0.3s ease;
     }
     nav a:hover {
       color: #ffffff;
     }
-
     /* Primary CTA Button */
     .cta-button {
       padding: 10px 20px;
@@ -71,10 +70,10 @@
       background-color: #333;
       color: #ffffff !important;
     }
-    
+   
     /* Hero Section (Updated to single column) */
     #hero-section {
-        background-color: #000000; 
+        background-color: #000000;
         padding: 100px 50px; /* Increased padding */
         display: flex;
         flex-direction: column; /* Added to stack logo and content vertically */
@@ -84,73 +83,70 @@
         max-width: 1400px;
         margin: 0 auto;
     }
-    
+   
     /* FLOATING LOGO STYLE */
     .hero-logo-float {
-        width: 100px; 
+        width: 100px;
         height: auto;
         margin-bottom: 30px;
         filter: brightness(0.8) invert(1); /* Makes it white/gray on black background */
-        animation: floaty 6s ease-in-out infinite; /* Apply the float animation */
+        animation: floaty 7s ease-in-out infinite, fadeInUp 1s ease-out;
     }
-
     .hero-content {
         flex: none;
         max-width: 800px; /* Limit width for readability */
         margin: 0 auto;
     }
-
     .hero-content h4 {
         color: #999999;
         font-size: 0.9rem;
         font-weight: 500;
         letter-spacing: 1px;
         margin-bottom: 10px;
+        animation: fadeInUp 1s ease-out 0.2s both;
     }
-
     .hero-content h1 {
         font-family: 'Playfair Display', serif;
         font-size: 3.5rem;
         color: #ffffff;
         margin-bottom: 20px;
+        animation: fadeInUp 1s ease-out 0.4s both;
     }
-
     .hero-content p {
         color: #cccccc;
         font-size: 1.1rem;
         line-height: 1.6;
         margin-bottom: 30px;
+        animation: fadeInUp 1s ease-out 0.6s both;
     }
-    
+   
     .hero-actions {
         display: flex;
         gap: 20px;
         align-items: center;
         justify-content: center; /* Center buttons */
+        animation: fadeInUp 1s ease-out 0.8s both;
     }
-
     .hero-actions .cta-button {
-        background-color: #ffffff; 
-        color: #000000 !important; 
+        background-color: #ffffff;
+        color: #000000 !important;
         border: none;
         padding: 15px 30px;
     }
-
     .hero-actions .cta-button:hover {
         background-color: #cccccc;
     }
-    
+   
     /* Secondary Button (View Our Work) */
     .hero-actions .cta-button[style] {
-        background-color: #1a1a1a !important; 
-        color: #ffffff !important; 
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
         border: 1px solid #333 !important;
     }
-    
+   
     .hero-actions .cta-button[style]:hover {
-        background-color: #333 !important; 
+        background-color: #333 !important;
     }
-
     /* Core Services Section (No change needed for layout, kept dark theme) */
     #core-services {
         background-color: #0a0a0a;
@@ -159,20 +155,17 @@
         border-top: 1px solid #1a1a1a;
         border-bottom: 1px solid #1a1a1a;
     }
-
     #core-services h2 {
         font-family: 'Playfair Display', serif;
         font-size: 2.2rem;
         color: #ffffff;
         margin-bottom: 10px;
     }
-
     #core-services > p {
         color: #cccccc;
         font-size: 1rem;
         margin-bottom: 50px;
     }
-
     .service-cards {
         display: flex;
         justify-content: center;
@@ -180,7 +173,6 @@
         max-width: 1200px;
         margin: 0 auto;
     }
-
     .service-card {
         flex: 1;
         padding: 40px;
@@ -188,52 +180,53 @@
         border: 1px solid #333333;
         border-radius: 8px;
         text-align: left;
-        transition: box-shadow 0.3s, background-color 0.3s;
+        transition: box-shadow 0.3s, background-color 0.3s, opacity 0.8s ease-out, transform 0.8s ease-out;
+        opacity: 0;
+        transform: translateY(40px);
     }
-
+    .service-card:nth-child(1) { transition-delay: 0.1s; }
+    .service-card:nth-child(2) { transition-delay: 0.3s; }
+    .service-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
     .service-card:hover {
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
         background-color: #242424;
     }
-
     .service-card .icon-header {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
     }
-    
+   
     .service-card .icon-header i {
         font-size: 1.8rem;
-        color: #cccccc; 
+        color: #cccccc;
         margin-right: 15px;
     }
-
     .service-card .icon-header h3 {
         font-family: 'Playfair Display', serif;
         font-size: 1.5rem;
         color: #ffffff;
     }
-
     .service-card > p {
         color: #aaaaaa;
         margin-bottom: 25px;
         line-height: 1.6;
     }
-
     .service-card ul {
         list-style: none;
         padding-left: 0;
     }
-
     .service-card ul li {
         color: #cccccc;
         margin-bottom: 10px;
         position: relative;
         padding-left: 20px;
     }
-
     .service-card ul li::before {
-        content: '\f00c'; 
+        content: '\f00c';
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
         color: #ffffff;
@@ -242,7 +235,7 @@
         left: 0;
         top: 3px;
     }
-    
+   
     .learn-more {
         display: inline-block;
         color: #ffffff;
@@ -254,7 +247,6 @@
     .learn-more:hover {
         color: #cccccc;
     }
-
     /* Why Choose Spartas Section (Updated to single column) */
     #why-choose {
         background-color: #000000;
@@ -268,56 +260,56 @@
         max-width: 1400px;
         margin: 0 auto;
     }
-    
+   
     .why-content {
         flex: none;
         max-width: 800px; /* Limit width for readability */
         margin: 0 auto;
     }
-    
+   
     .why-content h2 {
         font-family: 'Playfair Display', serif;
         font-size: 2.8rem;
         color: #ffffff;
         margin-bottom: 25px;
     }
-
     .why-content p {
         color: #cccccc;
         font-size: 1.1rem;
         line-height: 1.6;
         margin-bottom: 40px;
     }
-    
+   
     .feature-list {
         text-align: left; /* Re-align features list */
     }
-
     .feature-list .feature {
         display: flex;
         align-items: flex-start;
         margin-bottom: 30px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out both;
     }
-
+    .feature:nth-child(1) { animation-delay: 0.2s; }
+    .feature:nth-child(2) { animation-delay: 0.4s; }
+    .feature:nth-child(3) { animation-delay: 0.6s; }
+    .feature:nth-child(4) { animation-delay: 0.8s; }
     .feature-list .feature i {
         font-size: 1.5rem;
         color: #cccccc;
         margin-right: 20px;
         margin-top: 5px;
     }
-
     .feature-list .feature h4 {
         font-size: 1.2rem;
         color: #ffffff;
         margin-bottom: 5px;
     }
-
     .feature-list .feature p {
         font-size: 1rem;
         color: #aaaaaa;
         margin: 0;
     }
-
     /* Footer (Black Theme) */
     footer {
         background-color: #000000;
@@ -327,23 +319,23 @@
         font-size: 0.9em;
         border-top: 1px solid #1a1a1a;
     }
-
     footer a {
         color: #cccccc;
         margin-left: 5px;
         text-decoration: none;
     }
-
     footer a:hover {
         color: #ffffff;
     }
-
-    /* FLOATING ANIMATION KEYFRAMES */
+    /* ANIMATION KEYFRAMES */
     @keyframes floaty {
-        0%,100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%     { transform: translateY(-15px) rotate(2deg); }
     }
-
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
     /* Media Queries */
     @media (max-width: 1024px) {
         #hero-section, #why-choose {
@@ -366,13 +358,13 @@
   </style>
 </head>
 <body>
-  
+ 
   <header>
     <div class="logo-container">
         <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion Logo" class="logo-img">
         <div class="logo">Spartas</div>
     </div>
-    
+   
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Services</a>
@@ -381,10 +373,9 @@
       <a href="contact.html" class="cta-button">Claim Your Free Quote</a>
     </nav>
   </header>
-
   <section id="hero-section">
     <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion Logo" class="hero-logo-float">
-    
+   
     <div class="hero-content">
       <h4>Full Service Digital Agency</h4>
       <h1>Transform Your Brand With Custom Digital Experiences</h1>
@@ -396,10 +387,9 @@
         <a href="portfolio.html" class="cta-button" style="background-color: #1a1a1a; color: #ffffff !important; border: 1px solid #333;">View Our Work <i class="fas fa-arrow-right"></i></a>
       </div>
       <small style="display:block; margin-top: 20px; color: #666;">*No commitment required | Free consultation</small>
-      <p style="text-align: center; color: #cccccc; margin-top: 20px;">We have completed over 50+ Projects.</p> 
+      <p style="text-align: center; color: #cccccc; margin-top: 20px;">We have completed over 50+ Projects.</p>
     </div>
   </section>
-
   <section id="core-services">
     <h2>Our Core Services</h2>
     <p>
@@ -422,7 +412,6 @@
         </ul>
         <a href="portfolio.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
-
       <div class="service-card">
         <div class="icon-header">
           <i class="fas fa-paint-brush"></i>
@@ -441,12 +430,11 @@
       </div>
     </div>
   </section>
-
   <section id="why-choose">
     <div class="why-content">
       <h2>Why Growing Businesses Choose Spartas</h2>
       <p style="text-align: center; color: #cccccc; margin-bottom: 40px;">Our collective professional experience is over 5+ Years.</p>
-      
+     
       <p>
         We're not just developers and designers—we're your growth partners. Our integrated approach allows your project to run smoothly and works towards achieving your business goals.
       </p>
@@ -482,11 +470,25 @@
       </div>
     </div>
   </section>
-  
+ 
   <footer>
     <p>&copy; 2025 Spartas Agency. All rights reserved.</p>
     <p>Follow us: <a href="https://www.linkedin.com/in/ahmed-reda-632134366/" target="_blank"><i class="fab fa-linkedin"></i></a></p>
   </footer>
 
+  <script>
+    // Simple scroll trigger for service cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
