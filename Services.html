@@ -1,163 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Spartas Agency</title>
-    <!-- Favicon / Small logo in the tab -->
-    <link rel="icon" href="https://i.ibb.co/BHq6qDdx/Web.png" type="image/png">
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Custom Dark Theme Styles (Black & Silver) */
-        body {
-            background-color: #0d0d0d; /* Very dark background */
-            color: #cccccc; /* Light silver for general text */
-            font-family: 'Inter', sans-serif;
-            min-height: 100vh;
-        }
-        .header-bg {
-            background-color: #1a1a1a; /* Slightly lighter dark for header/footer */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-        .section-bg {
-            background-color: #1a1a1a;
-        }
-        /* Styling for the large Service Buttons */
-        .service-card {
-            background-color: #1a1a1a;
-            transition: all 0.3s ease;
-            border: 1px solid #333333;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            /* Gradient effect on hover */
-            background-image: linear-gradient(135deg, #1a1a1a 50%, #1a1a1a 50%);
-            background-size: 200% 200%;
-        }
-        .service-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            border-color: #aaaaaa;
-            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
-            background-position: 100% 100%;
-        }
-        .text-highlight {
-            color: #aaaaaa; /* A specific silver tone for highlights */
-        }
-        .cta-button {
-            background-color: #333333;
-            color: #ffffff;
-            transition: all 0.3s ease;
-            border: 1px solid #555555;
-        }
-        .cta-button:hover {
-            background-color: #555555;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-        }
-        .logo-img-nav {
-            filter: brightness(0.8) invert(1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Spartas Agency</title>
+  <link rel="icon" type="image/png" href="https://i.ibb.co/fdR2htKf/download-1.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background:#000000;
+      color:#cccccc;
+      font-family:'Inter',sans-serif;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    header {
+      background:#000000;
+      padding:15px 50px;
+      position:fixed;
+      top:0; left:0; right:0;
+      z-index:1000;
+      border-bottom:1px solid #1a1a1a;
+      animation:fadeInDown 1s ease-out both;
+    }
+    .logo-container { display:flex; align-items:center; }
+    .logo-img { width:32px; margin-right:12px; filter:brightness(0) invert(1); }
+    .logo { font-family:'Playfair Display',serif; font-size:2.6rem; font-weight:700; color:#e0e0e0; }
+
+    nav a {
+      color:#cccccc; margin-left:35px; text-decoration:none; font-weight:500; transition:color .3s;
+    }
+    nav a:hover, nav a.active { color:#ffffff; }
+    .cta-button {
+      padding:10px 24px; background:#000; color:#fff; border:1px solid #444; border-radius:6px;
+      font-weight:600; transition:all .3s;
+    }
+    .cta-button:hover { background:#333; transform:scale(1.05); }
+
+    /* Hero */
+    .hero {
+      text-align:center;
+      padding:160px 20px 100px;
+      background:radial-gradient(circle at top, #111 0%, #000 80%);
+    }
+    .hero h1 {
+      font-family:'Playfair Display',serif;
+      font-size:4.5rem; color:#fff; margin-bottom:20px;
+      opacity:0; animation:fadeInUp 1.2s ease-out .4s both;
+    }
+    .hero p {
+      max-width:800px; margin:0 auto 40px; font-size:1.2rem; color:#bbbbbb;
+      opacity:0; animation:fadeInUp 1.2s ease-out .6s both;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(420px, 1fr));
+      gap:40px;
+      max-width:1200px;
+      margin:0 auto 100px;
+      padding:0 40px;
+    }
+    .service-card {
+      background:#111;
+      padding:50px 30px;
+      border-radius:16px;
+      text-align:center;
+      border:1px solid #222;
+      transition:all .5s ease;
+      opacity:0;
+      transform:translateY(50px);
+    }
+    .service-card.visible {
+      opacity:1;
+      transform:translateY(0);
+    }
+    .service-card:hover {
+      transform:translateY(-15px);
+      background:#1a1a1a;
+      border-color:#555;
+      box-shadow:0 25px 50px rgba(0,0,0,0.7);
+    }
+    .service-card i {
+      font-size:4rem; color:#aaaaaa; margin-bottom:24px; transition:color .4s;
+    }
+    .service-card:hover i { color:#ffffff; }
+    .service-card h2 {
+      font-family:'Playfair Display',serif;
+      font-size:2.2rem; color:#fff; margin:20px 0;
+    }
+    .service-card p { color:#aaaaaa; margin-bottom:30px; line-height:1.6; }
+    .service-card .btn {
+      display:inline-block;
+      padding:14px 32px;
+      background:#000;
+      color:#aaa;
+      border:2px solid #aaa;
+      border-radius:50px;
+      font-weight:600;
+      transition:all .4s;
+    }
+    .service-card:hover .btn {
+      background:#aaa;
+      color:#000;
+    }
+
+    /* CTA Section */
+    .final-cta {
+      text-align:center;
+      padding:100px 20px;
+      background:#000;
+    }
+    .final-cta h2 { font-size:2.8rem; color:#fff; margin-bottom:20px; animation:fadeInUp 1s ease-out both; }
+    .final-cta p { color:#aaa; font-size:1.2rem; margin-bottom:40px; animation:fadeInUp 1s .2s both; }
+    .final-cta .cta-button {
+      padding:18px 40px; font-size:1.3rem; animation:fadeInUp 1s .4s both;
+    }
+
+    footer {
+      background:#000;
+      color:#888;
+      text-align:center;
+      padding:40px;
+      border-top:1px solid #1a1a1a;
+    }
+
+    footer a { color:#ccc; }
+
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeInDown { from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)} }
+
+    @media (max-width:768px) {
+      header { padding:15px 20px; flex-direction:column; gap:15px; }
+      nav a { margin:0 15px; }
+      .hero h1 { font-size:3rem; }
+      .services-grid { grid-template-columns:1fr; padding:0 20px; }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="header-bg fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-center py-4">
-                <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold text-white group cursor-pointer">
-                    <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Logo" class="h-8 logo-img-nav">
-                    <span class="text-gray-300 group-hover:text-white transition duration-300 text-3xl font-serif">Spartas</span>
-                </a>
-                <div class="flex items-center space-x-6 text-sm">
-                    <a href="index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a>
-                    <a href="Services.html" class="text-white">Services</a>
-                    <a href="portfolio.html" class="text-gray-400 hover:text-white transition duration-200">Portfolio</a>
-                    <a href="Testimonials.html" class="text-gray-400 hover:text-white transition duration-200">Testimonials</a>
-                    <a href="contact.html" class="px-4 py-2 rounded-full cta-button font-semibold shadow-lg">
-                        Claim Your Free Quote
-                    </a>
-                </div>
-            </div>
-        </div>
+  <header>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Lion" class="logo-img">
+      <div class="logo">Spartas</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Services.html" class="active">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="Testimonials.html">Testimonials</a>
+      <a href="contact.html" class="cta-button">Claim Your Free Quote</a>
     </nav>
-    <!-- End Navigation Bar -->
+  </header>
 
-    <main class="pt-24">
-        
-        <!-- Hero Section for Services -->
-        <header class="py-20 bg-black text-center">
-            <div class="max-w-4xl mx-auto px-6">
-                <h1 class="text-6xl font-extrabold text-white mb-4">
-                    Our <span class="text-highlight">Expert Services</span>
-                </h1>
-                <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                    Choose the path that leads to your success. We offer specialized solutions in both cutting-edge web development and impactful graphic design.
-                </p>
-            </div>
-        </header>
+  <section class="hero">
+    <h1>Our <span style="color:#aaaaaa">Expert Services</span></h1>
+    <p>
+      Choose the path that leads to your success. We offer specialized solutions in both cutting-edge web development and impactful graphic design.
+    </p>
+  </section>
 
-        <!-- Two Service Buttons Section -->
-        <section class="py-20 section-bg">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+  <div class="services-grid">
+    <div class="service-card">
+      <i class="fas fa-code"></i>
+      <h2>Custom Web Development</h2>
+      <p>Building high-speed, secure, and scalable digital platforms from scratch with modern frameworks, perfect performance, and flawless user experience.</p>
+      <a href="Learn-more-web-dev.html" class="btn">Explore Web Solutions →</a>
+    </div>
 
-                    <!-- Web Development Button -->
-                    <!-- UPDATED LINK TO MATCH USER'S PREFERRED FILE NAME -->
-                    <a href="Learn-more-web-dev.html" class="service-card block p-8 rounded-2xl text-center group">
-                        <i class="fa-solid fa-code text-6xl text-highlight mb-6 group-hover:text-white transition duration-300"></i>
-                        <h2 class="text-4xl font-bold mb-3 text-white group-hover:text-highlight transition duration-300">
-                            Custom Web Development
-                        </h2>
-                        <p class="text-gray-400 mb-6 group-hover:text-gray-300 transition duration-300">
-                            Building high-speed, secure, and scalable digital platforms from scratch.
-                        </p>
-                        <span class="inline-block px-8 py-3 text-lg font-semibold rounded-full bg-black text-highlight border border-highlight group-hover:bg-highlight group-hover:text-black transition duration-300">
-                            Explore Web Solutions &rarr;
-                        </span>
-                    </a>
+    <div class="service-card">
+      <i class="fas fa-palette"></i>
+      <h2>Comprehensive Graphic Design</h2>
+      <p>Creating memorable brand identities, logos, marketing materials, social media assets, and motion graphics that make you unforgettable.</p>
+      <a href="Learn-more-graphic-design.html" class="btn">Explore Design Services →</a>
+    </div>
+  </div>
 
-                    <!-- Graphic Design Button -->
-                    <!-- UPDATED LINK TO MATCH USER'S PREFERRED FILE NAME -->
-                    <a href="Learn-more-graphic-design.html" class="service-card block p-8 rounded-2xl text-center group">
-                        <i class="fa-solid fa-palette text-6xl text-highlight mb-6 group-hover:text-white transition duration-300"></i>
-                        <h2 class="text-4xl font-bold mb-3 text-white group-hover:text-highlight transition duration-300">
-                            Comprehensive Graphic Design
-                        </h2>
-                        <p class="text-gray-400 mb-6 group-hover:text-gray-300 transition duration-300">
-                            Creating memorable brand identities and stunning visual content across all media.
-                        </p>
-                        <span class="inline-block px-8 py-3 text-lg font-semibold rounded-full bg-black text-highlight border border-highlight group-hover:bg-highlight group-hover:text-black transition duration-300">
-                            Explore Design Services &rarr;
-                        </span>
-                    </a>
+  <section class="final-cta">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Claim your free consultation — no strings attached.</p>
+    <a href="contact.html" class="cta-button">Get Your Free Quote Now</a>
+  </section>
 
-                </div>
-            </div>
-        </section>
+  <footer>
+    © 2025 Spartas Agency. All rights reserved.
+  </footer>
 
-        <!-- Final CTA Section (from previous pages) -->
-        <section class="py-16 bg-black text-center">
-            <div class="max-w-4xl mx-auto px-6">
-                <h2 class="text-4xl font-bold text-white mb-4">
-                    Have a project in mind? Let's discuss it.
-                </h2>
-                <p class="text-xl text-gray-400 mb-8">
-                    Claim your free, no-obligation consultation to get started immediately.
-                </p>
-                <a href="contact.html" class="cta-button inline-block px-12 py-5 text-xl rounded-full font-bold shadow-2xl hover:scale-105 transform transition duration-300">
-                    Claim Your Free Quote Now
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="header-bg py-8 text-center text-gray-500 text-sm">
-        <div class="max-w-7xl mx-auto px-6">
-            &copy; 2025 Spartas Agency. All rights reserved. | <a href="contact.html" class="hover:text-white">Contact</a>
-        </div>
-    </footer>
-
+  <script>
+    const observer = new IntersectionObserver((e)=>{e.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*250)}})},{threshold:0.1});
+    document.querySelectorAll('.service-card').forEach(c=>observer.observe(c));
+  </script>
 </body>
 </html>
