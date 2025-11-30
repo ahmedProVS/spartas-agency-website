@@ -1,177 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphic Design | Spartas Agency</title>
-    <!-- Favicon / Small logo in the tab -->
-    <link rel="icon" href="https://i.ibb.co/BHq6qDdx/Web.png" type="image/png">
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Custom Dark Theme Styles (Black & Silver) */
-        body {
-            background-color: #0d0d0d; /* Very dark background */
-            color: #cccccc; /* Light silver for general text */
-            font-family: 'Inter', sans-serif;
-            min-height: 100vh;
-        }
-        .header-bg {
-            background-color: #1a1a1a; /* Slightly lighter dark for header/footer */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-        .section-bg {
-            background-color: #1a1a1a;
-        }
-        .cta-button {
-            background-color: #333333; /* Darker silver/gray for CTA */
-            color: #ffffff; /* White text on CTA */
-            transition: all 0.3s ease;
-            border: 1px solid #555555; /* Subtle border */
-        }
-        .cta-button:hover {
-            background-color: #555555; /* Lighter silver/gray on hover */
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* White shadow on hover */
-        }
-        .process-step {
-            border-left: 4px solid #555555; /* Silver border for process steps */
-        }
-        .text-highlight {
-            color: #aaaaaa; /* A specific silver tone for highlights */
-        }
-        .logo-img-nav {
-            filter: brightness(0.8) invert(1); /* Ensure the logo looks good on dark background */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphic Design | Spartas Agency</title>
+  <link rel="icon" type="image/png" href="https://i.ibb.co/fdR2htKf/download-1.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#000;color:#ccc;font-family:'Inter',sans-serif;overflow-x:hidden}
+    header{background:#000;padding:15px 50px;position:fixed;top:0;left:0;right:0;z-index:1000;border-bottom:1px solid #1a1a1a;animation:fadeInDown 1s both}
+    .logo-container{display:flex;align-items:center}
+    .logo-img{width:32px;margin-right:12px;filter:brightness(0) invert(1)}
+    .logo{font-family:'Playfair Display',serif;font-size:size:2.6rem;font-weight:700;color:#e0e0e0}
+    nav a{color:#ccc;margin-left:35px;text-decoration:none;font-weight:500;transition:.3s}
+    nav a:hover,nav a.active{color:#fff}
+    .cta-button{padding:10px 24px;background:#000;color:#fff;border:1px solid #444;border-radius:6px;font-weight:600;transition:.3s}
+    .cta-button:hover{background:#333;transform:scale(1.05)}
+    .hero{text-align:center;padding:160px 20px 100px;background:radial-gradient(circle at top,#111 0%,#000 80%)}
+    .hero h1{font-family:'Playfair Display',serif;font-size:4.5rem;color:#fff;margin-bottom:20px;opacity:0;animation:fadeInUp 1.2s .4s both}
+    .hero p{max-width:800px;margin:0 auto;font-size:1.2rem;color:#bbb;opacity:0;animation:fadeInUp 1.2s .6s both}
+    .content{max-width:1100px;margin:0 auto;padding:0 40px 120px}
+    .features{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;margin-top:60px;display:grid}
+    .feature{background:#111;padding:40px;border-radius:16px;border:1px solid #222;transition:.5s;opacity:0;transform:translateY(40px)}
+    .feature.visible{opacity:1;transform:translateY(0)}
+    .feature:hover{transform:translateY(-10px);border-color:#555;box-shadow:0 20px 40px rgba(0,0,0,.7)}
+    .feature i{font-size:3rem;color:#aaa;margin-bottom:20px}
+    .feature h3{font-size:1.6rem;color:#fff;margin:15px 0}
+    .cta-section{text-align:center;padding:100px 20px;background:#000}
+    .cta-section h2,.cta-section p{animation:fadeInUp 1s both}
+    .cta-section .cta-button{padding:18px 40px;font-size:1.3rem;animation:fadeInUp 1s .4s both}
+    footer{background:#000;color:#888;text-align:center;padding:40px;border-top:1px solid #1a1a1a}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeInDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){.hero h1{font-size:3rem}header{flex-direction:column;gap:15px;padding:15px 20px}}
+  </style>
 </head>
 <body>
-
-    <!-- Navigation Bar (Using the Black & Silver Theme and the logo) -->
-    <nav class="header-bg fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-center py-4">
-                <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold text-white group cursor-pointer">
-                    <!-- Your provided logo -->
-                    <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas Logo" class="h-8 logo-img-nav">
-                    <span class="text-gray-300 group-hover:text-white transition duration-300 text-3xl font-serif">Spartas</span>
-                </a>
-                <div class="flex items-center space-x-6 text-sm">
-                    <a href="index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a>
-                    <a href="Services.html" class="text-white">Services</a>
-                    <a href="Portfolio.html" class="text-gray-400 hover:text-white transition duration-200">Portfolio</a>
-                    <a href="Testimonials.html" class="text-gray-400 hover:text-white transition duration-200">Testimonials</a>
-                    <a href="contact.html" class="px-4 py-2 rounded-full cta-button font-semibold shadow-lg">
-                        Claim Your Free Quote
-                    </a>
-                </div>
-            </div>
-        </div>
+  <header>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/fdR2htKf/download-1.png" alt="Spartas" class="logo-img">
+      <div class="logo">Spartas</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Services.html" class="active">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html" class="cta-button">Free Quote</a>
     </nav>
-    <!-- End Navigation Bar -->
+  </header>
 
-    <main class="pt-24">
-        <!-- Hero Section -->
-        <header class="py-20 bg-black text-center">
-            <div class="max-w-4xl mx-auto px-6">
-                <h1 class="text-6xl font-extrabold text-white mb-4">
-                    Exceptional <span class="text-highlight">Comprehensive Graphic Design</span>
-                </h1>
-                <p class="text-xl text-gray-400 mb-8">
-                    We craft memorable brand identities, stunning marketing collateral, and engaging visual content that captures attention and drives customer loyalty.
-                </p>
-                <a href="contact.html" class="cta-button inline-block px-10 py-4 text-lg rounded-full font-bold shadow-xl hover:scale-[1.02]">
-                    Define Your Brand Today
-                </a>
-            </div>
-        </header>
+  <section class="hero">
+    <h1>Comprehensive Graphic Design</h1>
+    <p>Logos, brand identities, marketing materials, social media kits, and motion graphics that make you stand out and never be forgotten.</p>
+  </section>
 
-        <!-- Services Offered Section -->
-        <section class="py-16 section-bg">
-            <div class="max-w-7xl mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12 text-white">Our Creative Capabilities</h2>
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                        <i class="fa-solid fa-gem text-4xl text-highlight mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-3 text-highlight">Brand Identity & Logo</h3>
-                        <p class="text-gray-400">Creation of unique, timeless logos and complete brand style guides that ensure consistency across all platforms.</p>
-                    </div>
-                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                        <i class="fa-solid fa-print text-4xl text-highlight mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-3 text-highlight">Marketing Collateral</h3>
-                        <p class="text-gray-400">Design for print materials, brochures, business cards, and presentations that leave a professional, lasting impression.</p>
-                    </div>
-                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                        <i class="fa-brands fa-facebook-f text-4xl text-highlight mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-3 text-highlight">Social Media & Ads</h3>
-                        <p class="text-gray-400">High-impact graphics, templates, and full campaign creative optimized for Instagram, Facebook, LinkedIn, and more.</p>
-                    </div>
-                    <div class="p-6 bg-[#0d0d0d] rounded-xl shadow-2xl transition duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                        <i class="fa-solid fa-video text-4xl text-highlight mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-3 text-highlight">Video & Motion Graphics</h3>
-                        <p class="text-gray-400">Engaging motion graphics, animated logos, and short promotional videos to enhance digital storytelling and conversions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="content">
+    <div class="features">
+      <div class="feature"><i class="fas fa-gem"></i><h3>Brand Identity & Logos</h3><p>Unique, timeless logos and full brand guidelines.</p></div>
+      <div class="feature"><i class="fas fa-images"></i><h3>Social Media Kits</h3><p>Ready-to-post templates for Instagram, LinkedIn, TikTok.</p></div>
+      <div class="feature"><i class="fas fa-print"></i><h3>Print Design</h3><p>Business cards, brochures, banners, packaging.</p></div>
+      <div class="feature"><i class="fas fa-film"></i><h3>Motion Graphics & Video</h3><p>Animated logos, promo videos, YouTube intros.</p></div>
+      <div class="feature"><i class="fas fa-bullhorn"></i><h3>Marketing Materials</h3><p>Flyers, posters, email templates, ads.</p></div>
+      <div class="feature"><i class="fas fa-file-alt"></i><h3>UI/UX Design</h3><p>Clean, modern interfaces for web & mobile apps.</p></div>
+    </div>
+  </div>
 
-        <!-- Design Process Section -->
-        <section class="py-16 bg-black">
-            <div class="max-w-7xl mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-4 text-white">Our Creative Journey</h2>
-                <p class="text-lg text-gray-400 text-center mb-12">How we transform an idea into a powerful visual identity.</p>
-                
-                <div class="grid md:grid-cols-3 gap-10 text-center max-w-6xl mx-auto">
-                    <!-- Step 1 -->
-                    <div class="p-6 bg-[#1a1a1a] rounded-xl shadow-lg border border-gray-700">
-                        <div class="text-5xl font-extrabold text-highlight mb-4">01</div>
-                        <i class="fa-solid fa-comments text-4xl text-highlight mb-3"></i>
-                        <h3 class="text-2xl font-semibold mb-2 text-white">Concept & Discovery</h3>
-                        <p class="text-gray-400">In-depth discussion to understand your brand's mission, values, and target market before any design begins.</p>
-                    </div>
+  <section class="cta-section">
+    <h2>Let’s Create Your Visual Identity</h2>
+    <p>Get a free moodboard + quote in 24 hours.</p>
+    <a href="contact.html" class="cta-button" style="margin-top: 50px; display: inline-block;">
+    Start Your Project Now
+</a>
+  </section>
 
-                    <!-- Step 2 -->
-                    <div class="p-6 bg-[#1a1a1a] rounded-xl shadow-lg border border-gray-700">
-                        <div class="text-5xl font-extrabold text-highlight mb-4">02</div>
-                        <i class="fa-solid fa-paintbrush text-4xl text-highlight mb-3"></i>
-                        <h3 class="text-2xl font-semibold mb-2 text-white">Design & Iteration</h3>
-                        <p class="text-gray-400">Creation of initial concepts (e.g., 3 logo options). We iterate based on your feedback until the perfect design is achieved.</p>
-                    </div>
+  <footer>© 2025 Spartas Agency. All rights reserved.</footer>
 
-                    <!-- Step 3 -->
-                    <div class="p-6 bg-[#1a1a1a] rounded-xl shadow-lg border border-gray-700">
-                        <div class="text-5xl font-extrabold text-highlight mb-4">03</div>
-                        <i class="fa-solid fa-file-export text-4xl text-highlight mb-3"></i>
-                        <h3 class="text-2xl font-semibold mb-2 text-white">Finalization & Delivery</h3>
-                        <p class="text-gray-400">Delivery of all final source files (AI, EPS, SVG, PNG) and comprehensive brand usage guidelines.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- CTA Section -->
-        <section class="py-16 section-bg text-center">
-            <div class="max-w-4xl mx-auto px-6">
-                <h2 class="text-4xl font-bold text-white mb-4">
-                    Ready to elevate your visual presence?
-                </h2>
-                <p class="text-xl text-gray-400 mb-8">
-                    A powerful brand identity is your most important asset. Let's build yours today.
-                </p>
-                <a href="contact.html" class="cta-button inline-block px-12 py-5 text-xl rounded-full font-bold shadow-2xl hover:scale-105 transform transition duration-300">
-                    Get a Free Design Consultation
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="header-bg py-8 text-center text-gray-500 text-sm">
-        <div class="max-w-7xl mx-auto px-6">
-            &copy; 2025 Spartas Agency. All rights reserved. | <a href="contact.html" class="hover:text-white">Contact</a>
-        </div>
-    </footer>
-
+  <script>
+    const o=new IntersectionObserver(e=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*150)})},{threshold:.1});
+    document.querySelectorAll('.feature').forEach(f=>o.observe(f));
+  </script>
 </body>
 </html>
